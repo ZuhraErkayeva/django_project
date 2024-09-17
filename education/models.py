@@ -32,7 +32,7 @@ class Question(models.Model):
         return self.name
 class Option (models.Model):
     name = models.CharField(max_length=200)
-    is_correct = models.IntegerField()
+    is_correct = models.DateField()
     question = models.ForeignKey(Question, on_delete=models.SET_NULL,null=True)
     def __str__(self):
         return self.name
